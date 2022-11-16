@@ -1,4 +1,4 @@
-export const BASE_URL = "http://localhost:3001";
+export const BASE_URL = "https://api.aleksashkina.nomoredomains.icu";
 
 // Шаблон запроса
 function request({ url, method = "POST", data, token }) {

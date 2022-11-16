@@ -101,7 +101,7 @@ class Api {
 }
 
 export const api = new Api({
-  baseUrl: "http://localhost:3001",
+  baseUrl: "https://api.aleksashkina.nomoredomains.icu",
   credentials: 'include',
   headers: {
     "Content-Type": "application/json",
