@@ -40,12 +40,13 @@ app.get('/signout', (req, res) => {
 app.use('/users', require('./routes/usersRouter'));
 app.use('/cards', require('./routes/cardsRouter'));
 
-app.use(errorLogger); // подключаем логгер ошибок
-app.use(errors());
 app.use((req, res, next) => {
   next(new NotFoundError('Маршрут не найден. '));
 });
+
 app.use(errorsHandler);
+app.use(errorLogger); // подключаем логгер ошибок
+app.use(errors());
 
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}`);
