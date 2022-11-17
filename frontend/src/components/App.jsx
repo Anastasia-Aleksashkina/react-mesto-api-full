@@ -32,12 +32,10 @@ function App() {
 
   useEffect(() => {
     if (!isLoggedIn) return;
-    console.log(isLoggedIn);
     api
       .getUserInfo()
       .then((res) => {
         setCurrentUser(res);
-        // console.log(currentUser);
       })
       .catch((err) => {
         console.log(`Ошибка: ${err}`);
@@ -161,7 +159,6 @@ function App() {
       .then(() => {
         setIsInfoTooltip(true);
         setIsProve(true);
-        // setIsLoggedIn(true);
         history.push("/sign-in");
       })
       .catch((err) => {
